@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "survival365",
+	"version": "${version}",
+	"name": "Survival 365",
+	"description": "365-day survival challenge with selectable world scenarios.",
+	"authors": ["junseok"],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/survival365/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.junseok.survival365.Survival365"],
+		"client": ["com.junseok.survival365.client.Survival365Client"]
+	},
+	"mixins": [
+		{
+			"config": "survival365.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

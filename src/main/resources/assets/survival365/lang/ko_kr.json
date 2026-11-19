@@ -1,0 +1,35 @@
+{
+  "selectWorld.survival365.challenge": "365일 생존 난이도",
+  "selectWorld.survival365.challenge.info": "365일을 버텨라. 난이도는 어려움으로 고정됩니다.",
+  "selectWorld.survival365.scenario": "세계",
+  "selectWorld.survival365.difficulty_locked": "365일 생존 난이도에서는 어려움으로 고정됩니다",
+  "selectWorld.survival365.world_type_locked": "선택한 세계가 월드 유형을 정합니다",
+
+  "scenario.survival365.baghdad": "바그다드 마크",
+  "scenario.survival365.baghdad.desc": "끝없는 사막, 끝나지 않는 밤, 그리고 하늘에서 떨어지는 TNT.",
+  "generator.survival365.baghdad": "바그다드 마크",
+
+  "hud.survival365.day_passed": "하루가 지났다: %s",
+  "title.survival365.survived": "생존 성공!",
+
+  "bossbar.survival365.baghdad.calm": "폭격까지 %s",
+  "bossbar.survival365.baghdad.bombardment": "폭격 중! %s",
+  "bossbar.survival365.baghdad.raid": "습격! %s",
+  "bossbar.survival365.baghdad.aftermath": "정비 %s",
+  "title.survival365.baghdad.bombardment": "폭격 시작",
+  "title.survival365.baghdad.raid": "습격",
+  "phase.survival365.baghdad.calm": "대기",
+  "phase.survival365.baghdad.bombardment": "폭격",
+  "phase.survival365.baghdad.raid": "습격",
+  "phase.survival365.baghdad.aftermath": "정비",
+
+  "commands.survival365.status.disabled": "이 월드에서는 365일 생존 난이도가 꺼져 있습니다.",
+  "commands.survival365.status.enabled": "365일 생존 난이도 켜짐 — 세계: %s, 남은 일수: %s",
+  "commands.survival365.status.phase": "현재 페이즈: %s (남은 시간 %s)",
+  "commands.survival365.day.success": "남은 일수를 %s(으)로 설정했습니다.",
+  "commands.survival365.phase.success": "페이즈를 %s(으)로 바꿨습니다.",
+  "commands.survival365.skip.success": "현재 페이즈를 %s초 줄였습니다.",
+  "commands.survival365.cleanup.success": "습격 몹 %s마리를 제거했습니다.",
+  "commands.survival365.reload.success": "설정 파일을 다시 읽었습니다.",
+  "commands.survival365.not_baghdad": "이 명령은 바그다드 마크 세계에서만 쓸 수 있습니다."
+}

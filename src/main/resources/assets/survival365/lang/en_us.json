@@ -1,0 +1,35 @@
+{
+  "selectWorld.survival365.challenge": "365-Day Survival",
+  "selectWorld.survival365.challenge.info": "Survive for 365 days. Difficulty is locked to Hard.",
+  "selectWorld.survival365.scenario": "World",
+  "selectWorld.survival365.difficulty_locked": "Difficulty is locked to Hard in 365-Day Survival",
+  "selectWorld.survival365.world_type_locked": "The selected world decides the world type",
+
+  "scenario.survival365.baghdad": "Baghdad Craft",
+  "scenario.survival365.baghdad.desc": "Endless desert, endless night, and TNT falling from the sky.",
+  "generator.survival365.baghdad": "Baghdad Craft",
+
+  "hud.survival365.day_passed": "A day has passed: %s",
+  "title.survival365.survived": "You survived!",
+
+  "bossbar.survival365.baghdad.calm": "Bombardment in %s",
+  "bossbar.survival365.baghdad.bombardment": "Bombardment! %s",
+  "bossbar.survival365.baghdad.raid": "Raid! %s",
+  "bossbar.survival365.baghdad.aftermath": "Regroup %s",
+  "title.survival365.baghdad.bombardment": "Bombardment",
+  "title.survival365.baghdad.raid": "Raid",
+  "phase.survival365.baghdad.calm": "Calm",
+  "phase.survival365.baghdad.bombardment": "Bombardment",
+  "phase.survival365.baghdad.raid": "Raid",
+  "phase.survival365.baghdad.aftermath": "Aftermath",
+
+  "commands.survival365.status.disabled": "365-Day Survival is off in this world.",
+  "commands.survival365.status.enabled": "365-Day Survival on — world: %s, days left: %s",
+  "commands.survival365.status.phase": "Current phase: %s (%s left)",
+  "commands.survival365.day.success": "Set days left to %s.",
+  "commands.survival365.phase.success": "Switched phase to %s.",
+  "commands.survival365.skip.success": "Shortened the current phase by %s seconds.",
+  "commands.survival365.cleanup.success": "Removed %s raid mobs.",
+  "commands.survival365.reload.success": "Reloaded the config file.",
+  "commands.survival365.not_baghdad": "This command only works in a Baghdad Craft world."
+}

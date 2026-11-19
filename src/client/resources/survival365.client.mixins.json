@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "com.junseok.survival365.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"CreateWorldScreenMixin",
+		"GameTabMixin",
+		"WorldTabMixin",
+		"WorldCreationUiStateMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

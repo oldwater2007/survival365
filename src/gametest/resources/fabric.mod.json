@@ -1,0 +1,13 @@
+{
+	"schemaVersion": 1,
+	"id": "survival365-gametest",
+	"version": "1.0.0",
+	"name": "Survival 365 Game Tests",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-client-gametest": ["com.junseok.survival365.test.Survival365ClientGameTest"]
+	},
+	"depends": {
+		"survival365": "*"
+	}
+}
