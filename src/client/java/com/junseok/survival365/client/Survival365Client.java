@@ -13,6 +13,8 @@ public class Survival365Client implements ClientModInitializer {
 	public void onInitializeClient() {
 		ClientPlayNetworking.registerGlobalReceiver(CountdownSyncPayload.TYPE, (payload, context) -> ClientCountdownState.update(payload));
 		ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> ClientCountdownState.reset());
+		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> client.execute(() -> UpdateChecker.announce(client)));
 		HudElementRegistry.addLast(Survival365.id("countdown"), new CountdownHud());
+		UpdateChecker.start();
 	}
 }

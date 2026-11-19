@@ -30,3 +30,9 @@ SPEC에 없거나 26.3 API 때문에 SPEC과 달라진 부분을 한 줄씩 기�
 - `/s365 skip`은 페이즈가 있는 시나리오 전용이라 바그다드가 `registerCommands`로 등록한다(`/s365 phase`와 같은 방식).
 - 하루가 지날 때 액션바 문구는 `hud.survival365.day_passed`이고 인자로 "D-364"를 넘긴다.
 - 자동 확인용으로 Fabric 클라이언트 게임테스트(`src/gametest`, `./gradlew runClientGameTest`)를 추가했다. SPEC §12 항목 중 자동화할 수 있는 것을 검사한다.
+
+## 업데이트·배포
+- 업데이트는 "알림만" 한다: 클라이언트 시작 시 GitHub `releases/latest`를 1회 조회하고, 월드 접속 시 채팅에 다운로드 링크를 띄운다. jar를 자동으로 내려받거나 교체하지 않는다 (서버/클라이언트 버전 불일치·파일 잠금 위험).
+- 버전 비교는 태그의 `v`와 `-`/`+` 뒤를 버리고 점 단위 숫자로 비교한다. 조회 실패·404는 로그만 남긴다.
+- `config/survival365.json`의 `updates.checkForUpdates`로 끌 수 있다. 요청에는 버전 비교용 User-Agent 외 개인 정보를 보내지 않는다.
+- 릴리스는 GitHub Actions(`.github/workflows/build.yml`): `v*` 태그 푸시 시 `-Pversion=<태그>`로 빌드해 Release에 jar를 첨부한다.

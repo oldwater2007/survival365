@@ -2,6 +2,7 @@ package com.junseok.survival365.test;
 
 import com.junseok.survival365.client.ChallengeUiState;
 import com.junseok.survival365.client.ClientCountdownState;
+import com.junseok.survival365.client.UpdateChecker;
 import com.junseok.survival365.scenario.baghdad.BaghdadScenario;
 import com.junseok.survival365.scenario.baghdad.RaidSpawner;
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
@@ -21,8 +22,17 @@ import net.minecraft.world.level.levelgen.presets.WorldPresets;
 public class Survival365ClientGameTest implements FabricClientGameTest {
 	@Override
 	public void runTest(ClientGameTestContext context) {
+		testVersionCompare();
 		testCreateWorldScreen(context);
 		testBaghdadWorld(context);
+	}
+
+	private static void testVersionCompare() {
+		check(UpdateChecker.isNewer("v1.0.1", "1.0.0"), "patch bump is newer");
+		check(UpdateChecker.isNewer("v1.10.0", "1.9.9"), "numeric, not string, compare");
+		check(!UpdateChecker.isNewer("v1.0.0", "1.0.0"), "same version is not newer");
+		check(!UpdateChecker.isNewer("v0.9.0", "1.0.0"), "older is not newer");
+		check(UpdateChecker.isNewer("2.0", "1.9.9"), "missing parts count as zero");
 	}
 
 	private static void testCreateWorldScreen(ClientGameTestContext context) {

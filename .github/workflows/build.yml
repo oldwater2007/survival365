@@ -1,0 +1,48 @@
+name: Build and release
+
+# Every push to main builds the mod. Pushing a tag like v1.0.1 also publishes a GitHub Release
+# with the jar attached; the in-game update checker reads the latest Release.
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        run: |
+          chmod +x gradlew
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            ./gradlew build -Pversion="${GITHUB_REF_NAME#v}"
+          else
+            ./gradlew build
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: survival365
+          path: build/libs/*.jar
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" "build/libs/survival365-${VERSION}.jar" \
+            --title "Survival 365 ${VERSION}" --generate-notes

@@ -26,6 +26,7 @@ public final class ModConfig {
 
 	public Countdown countdown = new Countdown();
 	public BaghdadConfig baghdad = new BaghdadConfig();
+	public Updates updates = new Updates();
 
 	public static final class Countdown {
 		public int totalDays = 365;
@@ -41,6 +42,11 @@ public final class ModConfig {
 			if (dayChangeSound == null) dayChangeSound = d.dayChangeSound;
 			if (completeSound == null) completeSound = d.completeSound;
 		}
+	}
+
+	/** Client only: whether to ask GitHub for a newer release at startup. */
+	public static final class Updates {
+		public boolean checkForUpdates = true;
 	}
 
 	/** Dedicated-server only: decides whether a freshly generated world starts the challenge (SPEC §11). */
@@ -61,6 +67,7 @@ public final class ModConfig {
 		ModConfig loaded = read(FILE_NAME, ModConfig.class, new ModConfig());
 		if (loaded.countdown == null) loaded.countdown = new Countdown();
 		if (loaded.baghdad == null) loaded.baghdad = new BaghdadConfig();
+		if (loaded.updates == null) loaded.updates = new Updates();
 		loaded.countdown.validate();
 		loaded.baghdad.validate();
 		instance = loaded;

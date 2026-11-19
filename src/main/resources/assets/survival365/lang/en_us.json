@@ -30,6 +30,8 @@
   "commands.survival365.phase.success": "Switched phase to %s.",
   "commands.survival365.skip.success": "Shortened the current phase by %s seconds.",
   "commands.survival365.cleanup.success": "Removed %s raid mobs.",
+  "update.survival365.available": "Survival 365 %s is available (you have %s).",
+  "update.survival365.download": "[Download]",
   "commands.survival365.reload.success": "Reloaded the config file.",
   "commands.survival365.not_baghdad": "This command only works in a Baghdad Craft world."
 }

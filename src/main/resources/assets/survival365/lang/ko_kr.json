@@ -30,6 +30,8 @@
   "commands.survival365.phase.success": "페이즈를 %s(으)로 바꿨습니다.",
   "commands.survival365.skip.success": "현재 페이즈를 %s초 줄였습니다.",
   "commands.survival365.cleanup.success": "습격 몹 %s마리를 제거했습니다.",
+  "update.survival365.available": "Survival 365 새 버전 %s이(가) 나왔습니다 (현재 %s).",
+  "update.survival365.download": "[다운로드]",
   "commands.survival365.reload.success": "설정 파일을 다시 읽었습니다.",
   "commands.survival365.not_baghdad": "이 명령은 바그다드 마크 세계에서만 쓸 수 있습니다."
 }
